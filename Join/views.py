@@ -22,4 +22,10 @@ def login_success(request):
     return render(request, 'Join/login_success.html')
 
 
+@login_required()
+def Userlist(request):
+    userlists = User.objects.all()
+    return render(request, 'Join/userlist.html', {'userlists':userlists})
+
+
 
