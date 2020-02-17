@@ -2,7 +2,20 @@
 <br/>
 <br/>
 {% block content %}
-<div class="alert alert-success">{{new_user.username}}님! 가입을 환영합니다</div>
+{% for userlist in userlists %}
+<br/>
+    아이디: {{ userlist.username }}<br/>
+    성: {{ userlist.first_name }}<br/>
+    이름: {{ userlist.last_name }}<br/>
+    부서: {{ userlist.depart }}<br/>
+    직급: {{ userlist.position }}<br/>
+    연락처: {{ userlist.phone }}<br/>
+    근무위치: {{ userlist.floor }}<br/>
+{% endfor %}
+<br/>
 <br>
 <a href="{% url 'login' %}" class="">로그인 페이지로 이동</a>
 {% endblock %}
+
+
+
