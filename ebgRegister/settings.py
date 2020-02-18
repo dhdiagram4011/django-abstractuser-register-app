@@ -125,3 +125,13 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'Join.User'
 
 LOGIN_REDIRECT_URL = '/'
+
+
+## for send email
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'rlaehgud21764011@gmail.com'
+EMAIL_HOST_PASSWORD = '08425256@kdh'
+EMAIL_USE_TLS = True
+
+
